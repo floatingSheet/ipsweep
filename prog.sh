@@ -41,7 +41,7 @@ if ip addr show "$iface" > /dev/null 2>&1; then
         net4=$((i4 & m4))
 
         echo "Starte Ping auf Netzwerk: $net1.$net2.$net3.0/$cidr"
-        > "$output_file"  # Datei leeren
+        > "$output_file"
 
         for host in {1..254}; do
             target="$net1.$net2.$net3.$host"
